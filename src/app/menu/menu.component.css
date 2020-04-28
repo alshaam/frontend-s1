@@ -1,0 +1,52 @@
+.row{
+   
+    margin-bottom: 6px;
+}
+
+.card-header {
+text-align: center;
+color: white;
+background-color: #e27a3d;
+margin-bottom: -18px;
+}
+.card {
+    border: none;
+    width: 92%;
+    margin-left: 4%;
+}
+.inputsearch {
+    width: 300%;
+    margin-left: -40%;
+}
+.btnimg {
+    background-color: #e27a3d;
+}
+
+.card-body {
+    background-color: #324c5b ;
+    border: none;
+}
+
+.table-responsive {
+    background-color:white;
+}
+
+.imgmenu{
+    border: 3px solid #e27a3d;
+}
+
+th { color: black; 
+    font-weight: 500;
+letter-spacing: 2px;
+text-align: center;
+}
+
+td {
+    color: black;
+    letter-spacing: 2px;
+text-align: center
+}
+
+.searchtext {
+    color: white;
+}

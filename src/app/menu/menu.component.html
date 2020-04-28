@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div class="card">
+    
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-2"><h3 class="searchtext">Search:</h3></div>
+            <div class="search col-md-4">
+                <input class="inputsearch" type="text" 
+                [(ngModel)] = 'findText'/>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-6'>
+              
+            </div>
+        </div>
+
+        <div class='table-responsive'>
+            <table class='table' *ngIf='meals && meals.length'>
+              <thead>
+                <tr>
+                  <th>
+                    <button class='btnimg btn btn-primary'
+                    (click)= 'toggleImage()'>
+                     {{showImage ? 'Hide' : 'Show'}} Image
+                    </button>
+                  </th>
+                  <th>Meal</th>
+                  <th>Description</th>
+                  <th>Price</th>
+                  <th>5 Star Rating</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor='let meal of filteredMeals'>
+                    <td>
+                        <img class="imgmenu" *ngIf='showImage'
+                        [src]='meal.imageUrl'
+                        [title]='meal.mealName'
+                        [style.width.px]='imageWidth'
+                        [style.margin.px]='imageMargin'/>
+                    </td>
+                    <td><a [routerLink]= "['/menu', meal.mealId]" >{{meal.mealName}}</a></td>
+                    <td>{{meal.description}}</td>
+                    <td>{{meal.price | currency:'Dkk  ':true}}</td>
+                    <td><pm-rate [rating]= 'meal.stars'></pm-rate></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
+
+<footer>
+  <app-footer></app-footer>
+</footer>

@@ -1,0 +1,58 @@
+<div class='card' *ngIf='meal'>
+    <div class="card-header">
+        {{pageTitle + ': ' + meal.mealName}}
+    </div>
+
+
+    <div class='card-body'>
+        <div class='row'>
+          <div class='col-md-8'>
+            <div class='row'>
+              <div class='col-md-4'>Name:</div>
+              <div class='col-md-8'>{{meal.mealName}}</div>
+            </div>
+
+            <div class='row'>
+              <div class='col-md-4'>Description:</div>
+              <div class='col-md-8'>{{meal.description}}</div>
+            </div>
+
+            <div class='row'>
+              <div class='col-md-4'>Price:</div>
+              <div class='col-md-8'>{{meal.price | currency:'Dkk  ':true}}</div>
+            </div>
+            <div class='row'>
+              <div class='col-md-4'>5 Star Rating:</div>
+              <div class='col-md-8'>
+                <pm-rate [rating]='meal.stars'>
+                </pm-rate>
+              </div>
+            </div>
+          </div>
+    
+          <div class='col-md-4'>
+            <img class='center-block img-responsive'
+                 [style.width.px]='200'
+                 [style.margin.px]='2'
+                 [src]='meal.imageUrl'
+                 [title]='meal.mealName'>
+          </div>
+        </div>
+      </div>
+    
+
+
+
+
+
+    <div class='card-footer'>
+        <button class ='btn btn-outline-secondary'
+        (click)='onBack()'
+        style="width: 80px;">
+        <i class="fa fa-chevron-left"></i>Back
+        </button>
+
+    </div>
+
+
+</div>

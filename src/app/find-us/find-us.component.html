@@ -1,0 +1,72 @@
+<app-header></app-header>
+ 
+
+
+
+<div class="grid">
+  <img
+  src="../assets/Images/contacttruck.png"
+  class="contactimg"
+  alt="..."
+/>
+
+<div class="container">
+  
+  <h1 class="title">Contact Us</h1>
+ 
+<mat-form-field class="example-full-width" >
+    <mat-label class="insideinput">Your name</mat-label>
+    <input ngModel
+    #yourname="ngModel"
+    name="yourname"
+    type="text" matInput placeholder="Your name" required>
+    <mat-error *ngIf="yourname.invalid && yourname.errors.required">Your name field is required.</mat-error>
+  </mat-form-field>
+ 
+  <mat-form-field class="example-full-width">
+    <mat-label class="insideinput">Your lastname</mat-label>
+    <input ngModel
+    #yourlastname="ngModel"
+    name="yourlastname"
+    type="text" matInput placeholder="Your lastname" required>
+    <mat-error *ngIf="yourlastname.invalid && yourlastname.errors.required">Your lastname field is required.</mat-error>
+  </mat-form-field>
+ 
+  <br>
+ 
+  <mat-form-field class="example-full-width">
+    <mat-label class="insideinput">Your email</mat-label>
+    <input ngModel
+    #youremail="ngModel"
+    name="youremail"
+    type="email" matInput placeholder="Your email" required>
+    <mat-error *ngIf="youremail.invalid && youremail.errors.required">Your email field is required.</mat-error>
+  </mat-form-field>
+ 
+  
+  <mat-form-field class="example-full-width">
+    <mat-label class="insideinput">Telephone</mat-label>
+    <span matPrefix>+45 &nbsp;</span>
+    <input type="tel" matInput placeholder="555-555-1234">
+  </mat-form-field>
+ 
+  <br>
+ 
+  <mat-form-field >
+    <mat-label class="insideinput">Your message</mat-label>
+    <input ngModel
+    #yourmessage="ngModel" name="yourmessage" 
+    type="text" matInput placeholder="Your message" required><textarea matInput cdkTextareaAutosize
+    cdkAutosizeMinRows="3"
+    cdkAutosizeMaxRows="5"></textarea>
+    <mat-error *ngIf="yourmessage.invalid && yourmessage.errors.required">Your message field is required.</mat-error>
+  </mat-form-field>
+<br>
+  <a mat-button class="buttonsend">Send</a>
+ 
+</div>
+</div>
+
+<footer>
+  <app-footer></app-footer>
+</footer>

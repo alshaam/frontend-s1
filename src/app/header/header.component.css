@@ -1,0 +1,52 @@
+
+
+.logo {
+    width: 28%;
+    z-index: 1;
+    margin-left: 2%;
+  
+}
+
+.navbar {
+    background-color: black;
+    border-bottom: 2px solid white;
+}
+
+.navbar a{
+    color: #e27a3d;
+    padding-left: 20px;
+    padding-right: 20px;
+     
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+.mat-button {
+    background-color: white;
+    opacity: 70%;
+    
+    
+    
+}
+
+.nav-item {
+    margin-left: 10px;
+ 
+}
+.navbar-nav {
+    padding-right: 52px;
+}
+
+a {
+    text-decoration: none;
+padding: 4px;
+letter-spacing: 1px;
+}
